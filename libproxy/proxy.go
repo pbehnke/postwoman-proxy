@@ -94,7 +94,7 @@ func SetAccessToken(newAccessToken string) {
 func proxyHandler(response http.ResponseWriter, request *http.Request) {
     // We want to allow all types of requests to the proxy, though we only want to allow certain
     // origins.
-    response.Header().Add("Access-Control-Allow-Origin", "https://postwoman.io");
+    response.Header().Add("Access-Control-Allow-Origin", "*");
     response.Header().Add("Access-Control-Allow-Headers", "*");
     if request.Method == "OPTIONS" {
         response.WriteHeader(200);
